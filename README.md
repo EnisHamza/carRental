@@ -19,13 +19,13 @@ This is a REST API for a rental car system built with Node,Express Js and MongoD
 5. Start the Server:
    node server.js or npm start
 
-Endpoints
+### Endpoints
 POST /register: Register a new user.
 POST /login: Login with username and password
 GET /my-profile: Get the profile of the logged-in user (requires JWT authentication).
 GET /rental-cars: Get a list of available cars to rent. Can be filtered by year, color, steering_type, and number_of_seats.
 
-Testing
+### Testing
 You can use tools like Postman to test the endpoints.
 POST http://localhost:5000/auth/register  {"fullName": "John Doe", "email": "john@example.com", "username": "johndoe", "password": "password123"},
 POST http://localhost:5000/auth/login  {"username": "johndoe", "password": "password123"},
