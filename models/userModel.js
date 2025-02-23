@@ -1,4 +1,4 @@
-const { getDb } = require("../utils/db");
+const { getDb } = require("../utils/rent");
 const { ObjectId } = require("mongodb");
 
 async function createUser(fullName, email, username, password) {
@@ -21,7 +21,7 @@ async function findUserById(id) {
   const db = getDb();
   return db
     .collection("users")
-    .findOne({ _id: ObjectId(id) }, { projection: { password: 0 } });
+    .findOne({ _id: new ObjectId(id) }, { projection: { password: 0 } });
 }
 
 module.exports = { createUser, findUserByUsername, findUserById };
